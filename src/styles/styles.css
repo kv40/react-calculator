@@ -39,6 +39,7 @@ body {
     align-items: center;
 }
 
+/* Video Background */
 #moonloop {
     position:fixed;
     z-index: -1;
@@ -66,6 +67,7 @@ body {
     }
 }
 
+/* Calculator */
 .calculator {
     height: 80vh;
     width: 25%;
@@ -73,34 +75,49 @@ body {
     background-color: var(--color-white);
   }
 
-  .result-screen {
-    height: 19vh;
-    font-size: 8rem;
-    font-weight: 600;
-    /* To display the value at the bottom-right of the container */
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
+@media screen and (max-width: 1280px) {
+    .calculator {
+        width: 50%;
+    }
+}
 
-  .computation-screen {
-    height: 6vh;
-    font-size: 2.5rem;
-    
-    /* To display the value at the bottom-right of the container */
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
+@media screen and (max-width: 640px) {
+    .calculator {
+        width: 80%;
+    }
+}
 
-  .screen {
-    height: 25vh;
+/* Screen */
+.screen {
+  height: 25vh;
+  width: 100%;
+  padding: 0 2rem;
+  overflow: hidden;
+  white-space: no-wrap;
+  color: var(--color-light-white);
+  background-color: var(--color-light-black);
+}
+
+.result-screen {
+  height: 19vh;
+  font-size: 8rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.computation-screen {
+  height: 6vh;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Keypad */
+.keypad {
+    height: 55vh;
     width: 100%;
-    padding: 0 2rem;
-    overflow: hidden;
-    white-space: no-wrap;
-    color: var(--color-light-white);
-    background-color: var(--color-light-black);
 }
 
 .keypad_row {
@@ -110,11 +127,7 @@ body {
     color: white;
 }
 
-.keypad {
-    height: 55vh;
-    width: 100%;
-}
-
+/* Buttons */
 .btn {
     width: 25%;
     height: 100%;

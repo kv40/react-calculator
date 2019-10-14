@@ -7,7 +7,7 @@ import React from 'react';
             classes.push('btn--' + props.type);
         
         return (
-        <button className={classes.join(' ')} onclick={props.onButtonPress}>
+        <button className={classes.join(' ')} onClick={props.onButtonPress}>
             {props.children}
         </button>
     );
